@@ -1,0 +1,18 @@
+Topics to work:
+random nunber
+setTimeout - playing with timer
+Create element at runtime - document.createElement
+applendChild
+JSON - Object
+Local Storage
+Array 
+	Array of Integers (done)
+	Array of Strings(done)// make example
+	Array of objects //make example
+Methods of array
+	map
+	foreach
+	findIndex
+	splice
+	split as of 8/1 Done will turn into array espeically useful when you have commas.
+Fetch Api (doing as of 8/1)

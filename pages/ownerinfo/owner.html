@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <button><a href="../login/login.html">Login</a></button>
+    <button><a href="../home/home.html">Home</a></button>
+
+    <table id="menu1">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+
+
+    <table id="userlist">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+    
+    <label for="orderNumber">Order Number:</label>
+    <input type="text" id="orderNumber" >
+    <br><br>
+    <label for="orderQuantity">Order Quantity:</label>
+    <input type="text" id="orderQuantity">  
+    <br><br>
+    <input type="button" id="submit" value="submit order" onclick="catering()">
+        <br></br>
+        
+
+
+
+        <label><b> For Owner to reset</b> </label>
+        <br></br>
+        <label for="orderId">Orderid:</label>
+        <input type="number" id="orderID" >
+        <br><br>
+        <input type="button" id="submit2" value="resetnow" onclick="resetQuantity()">
+
+        <br></br>
+
+       <br><br>
+
+        <label for="Price">Price:</label>
+        <input type="text" id="price" name="Price" placeholder="e.g., 101"><br><br>
+
+        <label for="foodname">Food Name:</label>
+        <input type="text" id="Foodname"  placeholder="e.g., idli"><br><br>
+
+        <label for="foodCategory">Food Category:</label>
+        <input type="text" id="foodCategory" name="foodCategory" placeholder="e.g., Appetizer"><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" placeholder="e.g., 10"><br><br>
+
+        <input type="submit" value="Add Menu Item" onclick="additem()">
+
+        <br><br>
+        <label>For owner to delete foodid</label>
+        <input type="text" id="foodid" placeholder="e.g., 1,2">
+        <br><br>
+        <input type="button" value="Remove menu item" onclick="removemenuitem()">
+
+
+
+
+
+
+
+        <script src="owner.js"></script>
+
+
+
+
+
+
+    <!-- <script src="login.js"></script> -->
+</body>
+</html>
