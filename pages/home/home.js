@@ -40,12 +40,14 @@ function getMenuItems() {
                         <td>${dish.food_item}</td>
                         <td>${dish.category}</td>
                         <td>${dish.price}</td>
-                        <td>${dish.quantity}</td>
-                    </tr>
+                        <td>${dish.quantity}</td> 
+                    
+                    
+                        </tr>
                 `).join('')} 
             </tbody>
         `;
-        menu.append(table)
+        menu.append(table) //also keep in mind that columns have to match the orginal database columns.
     }).catch((error) => {
         console.log('Error:', error);
         alert(error.message || 'An unexpected error occurred.');
