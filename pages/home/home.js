@@ -2,6 +2,10 @@
 let menu = document.getElementById('menu1')
 let order = document.getElementById('orderNumber').value
 let quantity = document.getElementById('orderQuantity').value
+let table = document.createElement('table');
+
+
+
 
 // get menu
 function getMenuItems() {
@@ -13,12 +17,11 @@ function getMenuItems() {
         //this is meant to parse the data.
     }).then(response => {
         if (response.status === 200) {
-            return response.json();
+            return response.json(); //this returns promise.
         } else {
             alert ('Failed to fetch menu');
         }
     }).then(data => {
-        let table = document.createElement('table');
         menu.innerHTML=''
         table.innerHTML = `
             <thead>
@@ -104,62 +107,3 @@ function catering() {
 
 
 
-
-// function resetQuantity() {
-//     let food_item_id = document.getElementById('orderID').value
-//     if (food_item_id=='') {
-//         alert("Please enter food id.");
-//         return;
-//     }
-//     const username = localStorage.getItem('username'); //means you can take variable and put data in diffeeent file using getr
-//     const password = localStorage.getItem('password');
-//     const role = localStorage.getItem('role');
-
-//     if (username == "akshpatel" && password == "12345!" && role == "Owner") 
-//     {
-//         alert("You  have permission to reset quantities.");
-//     }
-//     else if(username != "akshpatel" && password != "12345!" && role != "Owner") 
-//     {
-//         alert("You dont have permmsion")
-//         return;
-    
-        
-//     }
-  
-//     fetch(`http://localhost:8083/menu/reset_quantity/?food_item_id=${food_item_id}`, {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({
-//                 username: username,
-//                 password: password,
-//                 role: role
-//             }),
-                
-            
-//         })
-       
-//         .then(data => { 
-//             if (data.status === 200) {
-//                 alert("Quantity reset successfully");
-//                 getMenuItems();
-//             } else if (data.status === 422) {
-//                 alert("Unable to reset. The quantity may not be 0 or the item doesn't exist.");
-//             } else {
-//                 throw new Error('Failed to reset quantity');
-//             }
-            
-//         })
-//         // .catch(error => {
-//         //     console.error('Error:', error);
-//         //     alert(error.message);
-//         // });
-//     }
-    
-
-
-
-
-// owner should reset quntity

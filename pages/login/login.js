@@ -1,6 +1,9 @@
 
 let userData = {} // need to create object so it can allign as api udnerstands response in json
 
+// const username = document.getElementById('username').value
+// const password = document.getElementById('password').value
+// const role = document.getElementById('role').value;
 
 function loginUser() {
     const username = document.getElementById('username').value
@@ -33,9 +36,6 @@ function loginUser() {
                 if(data.status == 200){
                     alert('login successful');
                     console.log('Success:', data);
-                    // localStorage.setItem('username', username);
-                    // localStorage.setItem('password', password);
-                    // localStorage.setItem('role', role);
 
 
 

@@ -1,0 +1,28 @@
+### FastAPI Project Documentation
+
+#### Overview
+This project sets up a RESTful API using the FastAPI framework combined with SQLAlchemy for database interactions for restaurant managment system. It provides endpoints for managing users, menu items, and orders, and includes CORS (Cross-Origin Resource Sharing) configuration to allow requests from specified origins.
+
+#### Requirements
+- **FastAPI**: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints.
+- **SQLAlchemy**: A SQL toolkit and Object-Relational Mapping (ORM) library for Python, used to interact with the database.
+- **Uvicorn**: A lightning-fast ASGI server implementation used to serve the FastAPI application.
+- **fastapi-middleware-cors**: Middleware to handle CORS, allowing or blocking requests from different origins.
+
+#### Setup Instructions
+1. **Install Dependencies**
+   Begin by ensuring you have Python installed on your system. Then, install the required Python packages using pip:
+   - FastAPI for creating the API.
+   - SQLAlchemy for ORM and database management.
+   - Uvicorn as the server to run the FastAPI application.
+   - fastapi-middleware-cors to manage CORS settings.
+
+2. **Running the Server**
+   To start the FastAPI application, use Uvicorn. The command should specify the location of the FastAPI app, the desired host and port, and enable auto-reloading for development purposes.
+
+#### CORS Configuration
+The application is configured to handle Cross-Origin Resource Sharing (CORS) to allow or restrict access to resources based on the origin of the request. In this setup, the API accepts requests from the following origins:
+- `http://127.0.0.1:5500`
+- `http://localhost:8083`
+
+This configuration ensures that only requests from these specified origins are permitted, enhancing security and managing cross-origin requests effectively.

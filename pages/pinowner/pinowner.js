@@ -1,13 +1,18 @@
 let btn1 = document.getElementById('owning');
+let pinnumber=document.getElementById('pinnumber').value
 
-btn1.addEventListener('click', secondcheckown);
-// make sure only owner has right
-function secondcheckown(event) {            
-    let pinnumber = document.getElementById('pinnumber').value;
+btn1.addEventListener('click', secondpinreset);
+function secondpinreset() {
+     pinnumber = atob('MjAwMQ=='); // This is base64 encoded '2001'
 
-    if (pinnumber == '13756421') {
-        window.location.href = "../ownerinfo/owner.html"
+    let pinnumber2=pinnumber
+    let enteredPin = prompt("Enter PIN number");
+    if (pinnumber ==pinnumber2 && enteredPin==pinnumber) {
+        alert('Password login successful!');
+        window.location.href = "../ownerinfo/owner.html";
     } else {
-        alert('Verification failed. Please try again.');
+        alert('Password login failed. Please try again.');
     }
 }
+
+

@@ -1,4 +1,3 @@
-
 // let username = document.getElementById("username");
 // let password = document.getElementById("password");
 // let role = document.getElementById("role");
@@ -21,7 +20,7 @@ function createUser() {
 
 
     // Input validation
-    if (username ==="" || password === "") {
+    if (username ==="" || password === "" || role==="") {
         alert("Username and password cannot be left blank.");
         return;
     }
@@ -34,19 +33,17 @@ function createUser() {
         },
         body: JSON.stringify(userData),
     })
-    .then(data => {
-         if(data.status==200)                           // console.log('Success:', data);
-        alert('User successfully!');
+    .then(response => {
+         if(response.status==200)                           // console.log('Success:', data);
+            alert('User successfully!');
         // Optionally redirect to login page or perform other actions        
-        
-        window.location.href = "../login/login.html"; // Redirect to login page
+            window.location.href = "../login/login.html"; // Redirect to login page
     })
 
-
-    .catch((error) => {
-        console.log('Error:', error);
-        alert(error.message || 'An unexpected error occurred.');
-    });
+    // .catch((error) => {
+    //     console.log('Error:', error);
+    //     alert(error.message || 'An unexpected error occurred.');
+    // });
 }
 
 
